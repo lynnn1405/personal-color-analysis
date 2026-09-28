@@ -7,8 +7,9 @@ import os
 # HAAR CASCADE — Detektor Wajah
 # ============================================================
 # Menggunakan os.path agar fleksibel di server manapun
-BASE_DIR = os.path.dirname(__file__)
-XML_PATH = os.path.join(BASE_DIR, 'haarcascade_frontalface_default.xml')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+XML_PATH = os.path.join(BASE_DIR, "haarcascade_frontalface_default.xml")
+
 FACE_CASCADE = cv2.CascadeClassifier(XML_PATH)
 
 # ============================================================
